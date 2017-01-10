@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     options: {encrypt: true, database: '2016web2-13'}
   };
   var connection = new Connection(config);
-  connection.on('connect',function(err)){
+  connection.on('connect',function(err){
                 if(err){
     res.render('index', { title: "hajimetenoDB", message:err});
   }else{
